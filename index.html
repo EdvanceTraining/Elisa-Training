@@ -231,7 +231,7 @@
       <section class="result" id="result" aria-live="polite">
         <h2>Your result</h2>
         <div class="score"><span id="score">0</span> / 120</div>
-        <p id="feedback"></p>
+        
       </section>
     </section>
   </main>
@@ -293,7 +293,6 @@
     const quizForm = document.getElementById("quizForm");
     const resultBox = document.getElementById("result");
     const scoreDisplay = document.getElementById("score");
-    const feedbackDisplay = document.getElementById("feedback");
     const message = document.getElementById("message");
     const resetButton = document.getElementById("resetButton");
     const answeredCount = document.getElementById("answeredCount");
@@ -361,7 +360,6 @@
         .reduce((sum, answer) => sum + Number(answer.value), 0);
 
       scoreDisplay.textContent = total;
-      feedbackDisplay.textContent = "";
       resultBox.style.display = "block";
       resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
     });
