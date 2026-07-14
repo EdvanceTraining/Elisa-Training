@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -361,18 +360,8 @@
       const total = Array.from(selectedAnswers)
         .reduce((sum, answer) => sum + Number(answer.value), 0);
 
-      let feedback = "";
-
-      if (total >= 100) {
-        feedback = "You’re an excellent listener.";
-      } else if (total >= 80) {
-        feedback = "You are a good listener and just need to improve on a few things.";
-      } else {
-        feedback = "It would be a good idea to work on some of your listening skills.";
-      }
-
       scoreDisplay.textContent = total;
-      feedbackDisplay.textContent = feedback;
+      feedbackDisplay.textContent = "";
       resultBox.style.display = "block";
       resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
     });
